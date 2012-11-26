@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="husen.css" /> 
+  <title>Backbone.js Husen</title>
+</head>
+
+<body>
+  <div id="husenapp">
+    <div id="add-btn" class="husen">
+      <div class="view">
+        <label>Create New Husen</label>
+      </div>
+    </div>
+
+    <div id="board"></div>
+  </div>
+
+  <script src="lib/jquery-1.7.1.js"></script>
+  <script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="lib/underscore.js"></script>
+  <script src="lib/backbone.js"></script>
+  <script src="lib/backbone-localstorage.js"></script>
+  <script src="husen.js"></script>
+
+  <!-- Template -->
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <label><%- title %></label>
+      <a class="destroy" ></a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,69 @@
+html, body, #husenapp, #board {
+  height: 100%;
+}
+
+#board div .edit {
+  display: none;
+}
+
+#board div.editing .view {
+  display: none;
+}
+
+#board div.editing .edit {
+  display: block;
+}
+
+.husen {
+  width: 250px;
+  height: 50px;
+  background-color: #ffff99;
+  position: absolute;
+}
+
+.husen:after {
+  width: 200px;
+  height: 45px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  z-index: -1;
+  -webkit-box-shadow: 0 5px 5px #555;
+  -moz-box-shadow: 0 5px 5px #555;
+  box-shadow: 0 5px 5px #555; 
+  -webkit-transform: rotate(2deg);
+  -moz-tranform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.husen .view, .husen .edit { 
+  width: 200px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -12px;
+}
+
+@font-face {
+  font-family: 'modernpics';
+  src: url('lib/modernpics.otf') format('opentype');
+}
+
+.destroy {
+  position: absolute;
+  right: 2px;
+  display: none;
+}
+
+.husen:hover .destroy {
+  display: inline;
+}
+
+.destroy:before {
+  font-family: "modernpics";
+  content: "x";
+}
